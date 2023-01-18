@@ -1,0 +1,186 @@
+body {
+    background-image: url("/multimedia/back1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 14.3cm;
+}
+
+.ribera {
+    font-size: 300%;
+}
+
+
+.almacen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 250%;
+}
+
+.titulo {
+    font-size: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: left;
+    width: 3cm;
+    margin-right: 10cm;
+}
+
+.logo1 {
+    display: flex;
+    justify-content:right;
+    width: 3cm;
+    margin-left: 10cm;
+}
+
+
+.index1 {
+    color: rgb(248, 245, 245);
+    font-size:  400%;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 1cm;
+}
+
+
+
+.parrafo1 {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    color: rgb(10, 10, 10);
+    font-weight: 500;
+    margin-bottom: 0.5cm;
+    margin-top: 0.5cm;  
+    background-color: rgb(233, 194, 137);
+    margin-left: 6.7cm;
+    margin-right: 6.7cm;
+    opacity: 0.8;
+}
+
+.parrafo2 {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    color: rgb(10, 10, 10);
+    font-weight: 500;
+    margin-bottom: 0.5cm;
+    margin-top: 0.5cm;  
+    background-color: rgb(233, 194, 137);
+    margin-left: 8.6cm;
+    margin-right: 8.6cm;
+    opacity: 0.8;
+}
+
+.parrafo3 {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    color: rgb(10, 10, 10);
+    font-weight: 500;
+    margin-bottom: 0.5cm;
+    margin-top: 0.5cm;  
+    background-color: rgb(233, 194, 137);
+    margin-left: 7.3cm;
+    margin-right: 7.3cm;
+    opacity: 0.8;
+}
+
+.parrafo4 {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    color: rgb(10, 10, 10);
+    font-weight: 500;
+    margin-bottom: 0.5cm;
+    margin-top: 0.5cm;  
+    background-color: rgb(233, 194, 137);
+    margin-left: 7.3cm;
+    margin-right: 7.3cm;
+    opacity: 0.8;
+}
+
+.parrafo5 {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    color: rgb(10, 10, 10);
+    font-weight: 500;
+    margin-bottom: 0.5cm;
+    margin-top: 0.5cm;  
+    background-color: rgb(233, 194, 137);
+    margin-left: 10.2cm;
+    margin-right: 10.2cm;
+    opacity: 0.8;
+}
+
+.parrafo6 {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    color: rgb(10, 10, 10);
+    font-weight: 500;
+    margin-bottom: 0.5cm;
+    margin-top: 0.5cm;  
+    background-color: rgb(233, 194, 137);
+    margin-left: 6cm;
+    margin-right: 6cm;
+    opacity: 0.8;
+    
+}
+
+
+.carousel-inner {
+    display: flex;  
+    align-items: center;
+    justify-content: space-around;
+    min-height: 50vh;
+    margin-top: 1cm;
+    }
+    
+
+.mapa {
+    text-align: center;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    margin-right: 12cm;
+}
+
+iframe  {
+    text-align: center;
+    width: 500px;  
+    height: 450px; 
+    margin-top: 1cm;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black; 
+    border-left: 5px solid black;
+}
+
+.clientes {
+    color:rgb(248, 245, 245);
+}
+
+.fotito {
+    width: 549px;
+    height: 307.43px;
+}
+
+
+
+.footer {
+    margin-top: 0.5cm;
+}
+
+
+
+

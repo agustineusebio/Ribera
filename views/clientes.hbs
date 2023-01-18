@@ -1,0 +1,156 @@
+<body class="fondoclientes">
+  
+</body>
+<div class="container text-center m-5" style="color: rgb(252, 249, 249);">
+    <h1 style=" margin-left: 2.5cm;">
+        Formulario de Clientes
+    </h1>
+    <h5 style=" margin-left: 2.5cm;">Ingrese sus datos, para luego poder realizar pedidos.</h5>
+</div>
+
+    <div class="container m-5" style="color: rgb(250, 247, 247); font-size:larger">
+    <form action="/clientes" method="post">
+    <div class="mb-1"  style="margin-left: 3cm;">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+    </div>
+    <div class="mb-1" style="margin-left: 3cm;">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="apellido" name="apellido" required>
+    </div>
+    <div class="mb-1" style="margin-left: 3cm;">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" name="email" required>
+    </div>
+        <div class="mb-1" style="margin-left: 3cm;">
+        <label for="direccion" class="form-label">Direccion</label>
+        <input type="text" class="form-control" id="direccion" name="direccion" required>
+    </div>
+     <div class="mb-1 text-center" style="margin-top: 1cm; margin-left: 3cm;">
+    <button type="submit" class="btn btn-success w-50" style="font-size: larger">Enviar Datos</button>
+    </div>
+    </form>
+    </div>
+
+    <div class="container text-center m-5 ">
+
+    <h1 style="color: rgb(250, 249, 249); margin-left: 3cm;">
+     Nuestros Clientes
+   </h1>
+
+</div>
+
+<table class="table table-borderless container" id="mitabla">
+  <thead>
+    <tr style="color: rgb(252, 249, 249); font-size:larger ">
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Email</th>
+      <th scope="col">Dirección</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each datos}}
+    <tr style="color: rgb(248, 245, 245); font-size:large">
+      <th style="color: rgb(248, 245, 245); font-size:large" scope="row">{{ idCliente }}</th>
+      <td style="color: rgb(248, 245, 245); font-size:large">{{ nombre }}</td>
+      <td style="color: rgb(248, 245, 245); font-size:large">{{ apellido }}</td>
+      <td style="color: rgb(248, 245, 245); font-size:large">{{ email }}</td>
+      <td style="color: rgb(248, 245, 245); font-size:large">{{ direccion }}</td>
+      <td style="color: rgb(248, 245, 245); font-size:large"> 
+        <a href="javascript:void(0);" class="btn btn-danger delete" data-idCliente="{{ idCliente }}">Delete</a> 
+        <a href="javascript:void(0);" class="btn btn-dark edit" data-idCliente=""="{{ idCliente }}" data-nombre="{{ nombre }}" data-apellido="{{ apellido }}" data-email="{{ email }}" data-direccion="{{ direccion }}"">Update</a>
+      </td>
+    </tr>
+     {{/each}}
+  </tbody>
+</table>
+
+ <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<form action="/delete" method="post">
+<div class="modal" id="DeleteModal" role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Eliminar Cliente</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Estas seguro de eleminar el CLiente?</p>
+      </div>
+      <div class="modal-footer">
+        <input type="number" name="idCliente" id="idCliente" class="idCliente" required>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+
+<form action="/update" method="post">
+"<div class="modal fade" id="EditModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Datos del Cliente</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="mb-3">
+            <label for="nombre" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control nombre" id="nombre" name="nombre">
+          </div>
+              <div class="mb-3">
+            <label for="apellido" class="col-form-label">Apellido:</label>
+            <input type="text" class="form-control apellido" id="apellido" name="apellido">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="col-form-label">Email:</label>
+            <textarea class="form-control email" id="email" name="email"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="direccion" class="col-form-label">Dirección:</label>
+            <textarea class="form-control direccion" id="direccion" name="direccion"></textarea>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <input type="number" name="idCliente" id="idCliente" class="idCliente">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-dark">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
+
+<script>
+
+ $(document).ready(function() {
+
+   $('#mitabla').on('click', '.delete', function (){
+    let idCliente = $(this).data('idCliente');
+    $('#DeleteModal').modal('show')
+   })
+
+ $('#mitabla').on('click', '.edit', function (){
+    let idCliente = $(this).data('idCliente');
+    let nombre = $(this).data('nombre');
+    let apellido = $(this).data('apellido');
+    let email = $(this).data('email');
+    let direccion = $(this).data('direccion');
+    $('#EditModal').modal('show');
+    $('.nombre').val(nombre);
+    $('.apellido').val(apellido);
+    $('.email').val(email);
+    $('.direccion').val(direccion);
+   })
+
+  })
+</script>

@@ -1,0 +1,29 @@
+
+<div class="container text-center m-5">
+ 
+    <h1 class="title" style="color: rgb(248, 245, 245); margin-left: 2.5cm;">
+        Realice aqui su pedido
+   </h1>
+   <H5 style="color: rgb(248, 245, 245); margin-left: 2.5cm;">Si ingresa por primera vez, recuerde primero ingresar sus datos en la sección de <a href='Clientes' class="clientes" >Clientes</a>.</H5>
+    
+</div>
+
+<div class="container m-5" style="color: rgb(248, 245, 245); font-size:larger;">
+<form action="/pedidos" method="post">
+    <div class="mb-3" style="margin-left: 3cm;">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3" style="margin-left: 3cm;">
+        <label for="idCliente" class="form-label">N° Cliente</label>
+        <input type="number" class="form-control" id="idCliente" name="idCliente" required>
+    </div>
+    <div class="mb-3" style="margin-left: 3cm;">
+        <label for="productos" class="form-label">Indique los productos y sus cantidades</label>
+        <input type="text" class="form-control" id="productos" name="productos" required>
+    </div>
+    <div class="mb-1 text-center" style="margin-top: 1cm; margin-left: 3cm;">
+    <button type="submit" class="btn btn-success w-50" style="font-size: larger;">Enviar Pedido</button>
+    </div>
+</form>
+</div>
